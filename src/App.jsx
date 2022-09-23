@@ -1,7 +1,11 @@
-import logo from './logo.svg';
+import Nav from './components/nav';
 
 function App() {
-  return <div className="w-screen h-screen bg-neutral-200">Alexmannetje</div>;
+  return (
+    <div>
+      <Nav />
+    </div>
+  );
 }
 
 export default App;
