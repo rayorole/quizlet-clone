@@ -165,7 +165,7 @@ export default function Features() {
               <h6 className="mt-2 font-bold">open source</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                ...
+                free and open source code available on Github
               </p>
             </a>
 
