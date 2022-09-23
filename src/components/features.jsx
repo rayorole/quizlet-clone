@@ -30,7 +30,7 @@ export default function Features() {
               <h6 className="mt-2 font-bold">Free</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                Due to other sites becomming paid, learning should be free.
+                Learning should be free.
               </p>
             </a>
 
@@ -59,10 +59,10 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">Accountant</h6>
+              <h6 className="mt-2 font-bold">Easy to use</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                Lorem ipsum dolor sit amet consectetur.
+                No ads, No useless info. just easy
               </p>
             </a>
 
