@@ -88,7 +88,7 @@ export default function Footer() {
 
               <a
                 className="hover:opacity-75"
-                href=""
+                href="https://github.com/rayorole/quizlet-clone"
                 target="_blank"
                 rel="noreferrer"
               >

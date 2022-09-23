@@ -32,7 +32,7 @@ export default function Nav() {
             <a className="text-gray-500" href="">
               New set
             </a>
-            <a className="text-gray-500" href="">
+            <a className="text-gray-500" href="/credits">
               Credits
             </a>
           </nav>
