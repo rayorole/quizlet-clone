@@ -92,6 +92,7 @@ export default function Signup() {
                 </label>
                 <button
                   name="Google"
+                  type='button'
                   className="text-sm border px-4 py-1.5 space-x-3 hover:bg-neutral-100 hover:border-gray-300 hover:shadow-md transition-all ease-in duration-50 font-semibold text-gray-700 flex items-center justify-between bg-white border-gray-200 rounded-md shadow-sm"
                 >
                   <p>Google</p>
@@ -103,6 +104,7 @@ export default function Signup() {
                 </button>
                 <button
                   name="Google"
+                  type='button'
                   className="text-sm border px-4 py-1.5 space-x-3 hover:bg-neutral-100 hover:border-gray-300 hover:shadow-md transition-all ease-in duration-50 font-semibold text-gray-700 flex items-center justify-between bg-white border-gray-200 rounded-md shadow-sm"
                 >
                   <p>Github</p>
@@ -121,9 +123,10 @@ export default function Signup() {
 
                 <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                   Already have an account?
-                  <button className="inline-block px-6 py-3 ml-3 text-sm font-medium text-white bg-blue-600 border border-blue-600 transition rounded-md shrink-0 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                  <a className="inline-block px-6 py-3 ml-3 text-sm font-medium text-white bg-blue-600 border border-blue-600 transition rounded-md shrink-0 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                  href='/Login'>
                     Login
-                  </button>
+                  </a>
                   .
                 </p>
               </div>
