@@ -29,10 +29,10 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">Accountant</h6>
+              <h6 className="mt-2 font-bold">Free</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                Lorem ipsum dolor sit amet consectetur.
+                Due to other sites becomming paid, learning should be free.
               </p>
             </a>
 
@@ -189,16 +189,11 @@ export default function Features() {
           <div className="max-w-lg mx-auto text-center lg:text-left lg:mx-0">
             <h2 className="text-3xl font-bold sm:text-4xl">Features</h2>
 
-            <p className="mt-4 text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vero
-              aliquid sint distinctio iure ipsum cupiditate? Quis, odit
-              assumenda? Deleniti quasi inventore, libero reiciendis minima
-              aliquid tempora. Obcaecati, autem.
-            </p>
+            <p className="mt-4 text-gray-600">Free</p>
 
             <a
               className="relative mt-4 inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
-              href="/download"
+              href="/sets"
             >
               <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
                 <svg
@@ -218,7 +213,7 @@ export default function Features() {
               </span>
 
               <span className="text-sm font-medium transition-all group-hover:mr-4">
-                Create your first set now
+                Create your set now
               </span>
             </a>
           </div>
