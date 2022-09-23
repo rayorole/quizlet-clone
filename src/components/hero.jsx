@@ -17,12 +17,12 @@ export default function Hero() {
             <h2 className="text-3xl font-bold sm:text-4xl">Quizzie</h2>
 
             <p className="mt-4 text-gray-600">
-              Early morning? All-nighter? With teaching methods backed by
-              learning science, Quizzie is designed to save you time.
+              Tired from using books to learn a vocabulary? Search no more,
+              Quizzie is an online learning platform.
             </p>
 
             <a
-              href="#"
+              href="/login"
               className="inline-flex items-center px-8 py-3 mt-8 text-white bg-indigo-600 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
             >
               <span className="text-sm font-medium"> Get Started </span>
