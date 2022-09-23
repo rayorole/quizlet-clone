@@ -10,9 +10,7 @@ export default function Cta() {
           </h2>
 
           <p className="hidden text-gray-500 sm:mt-4 sm:block">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor
-            officia blanditiis repellat in, vero, aperiam porro ipsum laboriosam
-            consequuntur exercitationem incidunt tempora nisi?
+            ofc there are no questions cuz we are a perfect site <3.
           </p>
         </div>
 
