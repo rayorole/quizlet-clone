@@ -19,7 +19,6 @@ export default function Features() {
             <a
               data-aos="fade-right"
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-              href="/accountant"
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
                 <svg
@@ -49,7 +48,6 @@ export default function Features() {
 
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-              href="/accountant"
               data-aos="fade-right"
               data-aos-delay={100}
             >
@@ -81,7 +79,6 @@ export default function Features() {
 
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-              href="/accountant"
               data-aos="fade-right"
               data-aos-delay={100}
             >
@@ -113,7 +110,6 @@ export default function Features() {
 
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-              href="/accountant"
               data-aos="fade-right"
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
@@ -144,7 +140,6 @@ export default function Features() {
 
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-              href="/accountant"
               data-aos="fade-right"
               data-aos-delay={100}
             >
@@ -176,7 +171,6 @@ export default function Features() {
 
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
-              href="/accountant"
               data-aos="fade-right"
               data-aos-delay={200}
             >
