@@ -180,6 +180,10 @@ export default function Features() {
           </div>
           <div className="max-w-lg mx-auto text-center lg:text-left lg:mx-0">
             <h2 className="text-3xl font-bold sm:text-4xl">Features</h2>
+            <p className="my-3 text-sm font-medium text-neutral-700">
+              Quizzie offers some great features for you to be able to learn and
+              gather more information. Explore some of our features here
+            </p>
             <a
               className="relative mt-4 inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
               href="/sets"
