@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Cta() {
   return (
-    <aside className="">
+    <aside>
       <div className="p-8 md:p-12 lg:px-16 lg:py-24">
         <div className="max-w-lg mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
@@ -26,13 +26,13 @@ export default function Cta() {
               <input
                 type="email"
                 placeholder="Email address"
-                className="w-full p-3 text-gray-700 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-yellow-400 focus:border-white"
+                className="w-full p-3 text-gray-700 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-blue-400 focus:border-white"
               />
             </div>
 
             <button
               type="submit"
-              className="flex items-center justify-center w-full px-5 py-3 mt-4 text-white transition rounded-md bg-blue-600 sm:mt-0 sm:w-auto group focus:outline-none focus:ring focus:ring-yellow-400"
+              className="flex items-center justify-center w-full px-5 py-3 mt-4 text-white transition rounded-md bg-blue-600 sm:mt-0 sm:w-auto group focus:outline-none focus:ring focus:ring-blue-400"
             >
               <span className="text-sm font-medium"> Sign Up </span>
 

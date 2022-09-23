@@ -218,7 +218,7 @@ export default function Features() {
               </span>
 
               <span className="text-sm font-medium transition-all group-hover:mr-4">
-                Start now
+                Create your first set now
               </span>
             </a>
           </div>
