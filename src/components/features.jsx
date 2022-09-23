@@ -2,20 +2,18 @@ import React, { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-import { CashIcon, BanIcon } from '@heroicons/react/outline';
-
 export default function Features() {
   useEffect(() => {
     Aos.init({
-      offset: 100,
-      duration: 400,
+      offset: 200,
+      duration: 600,
       easing: 'ease-in-sine',
-      delay: 0,
+      delay: 100,
     });
   }, []);
   return (
     <section className="bg-gray-50">
-      <div className="px-4 py-16 max-w-screen-xl sm:px-6 lg:px-8">
+      <div className="px-4 py-24 max-w-screen-xl sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             <a
@@ -24,10 +22,25 @@ export default function Features() {
               href="/accountant"
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
-                <CashIcon className="w-6 h-6" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                  ></path>
+                </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">Free</h6>
+              <h6 className="mt-2 font-bold">Sets</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                 Learning should be free.
@@ -41,7 +54,22 @@ export default function Features() {
               data-aos-delay={100}
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
-                <BanIcon className="w-6 h-6" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                  ></path>
+                </svg>
               </span>
 
               <h6 className="mt-2 font-bold">Easy to use</h6>
