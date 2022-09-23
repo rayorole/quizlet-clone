@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Features() {
+  useEffect(() => {
+    Aos.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  }, []);
   return (
     <section className="bg-gray-50">
       <div className="px-4 py-16 max-w-screen-xl sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             <a
+              data-aos="fade-right"
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               href="/accountant"
             >
@@ -39,6 +50,8 @@ export default function Features() {
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               href="/accountant"
+              data-aos="fade-right"
+              data-aos-delay={100}
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
                 <svg
@@ -69,6 +82,8 @@ export default function Features() {
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               href="/accountant"
+              data-aos="fade-right"
+              data-aos-delay={200}
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
                 <svg
@@ -99,6 +114,7 @@ export default function Features() {
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               href="/accountant"
+              data-aos="fade-right"
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
                 <svg
@@ -129,6 +145,8 @@ export default function Features() {
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               href="/accountant"
+              data-aos="fade-right"
+              data-aos-delay={100}
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
                 <svg
@@ -159,6 +177,8 @@ export default function Features() {
             <a
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               href="/accountant"
+              data-aos="fade-right"
+              data-aos-delay={200}
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
                 <svg
