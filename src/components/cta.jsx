@@ -1,3 +1,4 @@
+import { FingerPrintIcon } from '@heroicons/react/solid';
 import React from 'react';
 
 export default function Cta() {
@@ -24,30 +25,16 @@ export default function Cta() {
               <input
                 type="email"
                 placeholder="Email address"
-                className="w-full p-3 text-gray-700 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-blue-400 focus:border-white"
+                className="w-full p-2 text-gray-700 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-blue-400 focus:border-white"
               />
             </div>
 
             <button
               type="submit"
-              className="flex items-center justify-center w-full px-5 py-3 mt-4 text-white transition rounded-md bg-blue-600 sm:mt-0 sm:w-auto group focus:outline-none focus:ring focus:ring-blue-400"
+              className="flex items-center hover:bg-indigo-700 duration-100 justify-center w-full space-x-2 px-5 py-3 mt-4 text-white transition rounded-md bg-indigo-600 sm:mt-0 sm:w-auto group focus:outline-none focus:ring focus:ring-blue-400"
             >
-              <span className="text-sm font-medium"> Sign Up </span>
-
-              <svg
-                className="w-5 h-5 ml-3"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
+              <span className="text-sm font-medium">Sign Up</span>
+              <FingerPrintIcon className="w-4 h-4" />
             </button>
           </form>
         </div>

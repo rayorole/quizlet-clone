@@ -101,11 +101,11 @@ export default function Footer() {
 
               <a
                 className="hover:opacity-75"
-                href=""
+                href="/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="sr-only"> Dribbble </span>
+                <span className="sr-only">Dribbble</span>
 
                 <svg
                   className="w-6 h-6"
@@ -157,7 +157,12 @@ export default function Footer() {
               <p className="font-medium">Helpful Links</p>
 
               <nav className="flex flex-col mt-4 text-sm text-gray-500 space-y-2">
-                <a className="hover:opacity-75" href="">
+                <a
+                  className="hover:opacity-75"
+                  href="https://github.com/rayorole/quizlet-clone"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Source Code
                 </a>
               </nav>

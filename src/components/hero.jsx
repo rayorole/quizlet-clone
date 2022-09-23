@@ -5,11 +5,11 @@ export default function Hero() {
     <section>
       <div className="px-4 py-16 lg:pb-0 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
-          <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last">
+          <div className="relative h-72 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last">
             <img
               alt="Party"
               src="/undraw-hero.svg"
-              className="absolute inset-0 object-cover w-full h-full"
+              className="absolute inset-0 object-contain w-full h-full"
             />
           </div>
 

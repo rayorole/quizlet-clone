@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 export default function Features() {
   useEffect(() => {
     Aos.init({
-      offset: 200,
+      offset: 0,
       duration: 600,
       easing: 'ease-in-sine',
       delay: 100,
