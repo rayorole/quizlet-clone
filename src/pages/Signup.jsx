@@ -87,6 +87,9 @@ export default function Signup() {
               </div>
 
               <div className="col-span-6 flex space-x-3 items-center">
+                <label className="block text-sm font-medium text-gray-700">
+                  Or sign up with:
+                </label>
                 <button
                   name="Google"
                   className="text-sm border px-4 py-1.5 space-x-3 hover:bg-neutral-100 hover:border-gray-300 hover:shadow-md transition-all ease-in duration-50 font-semibold text-gray-700 flex items-center justify-between bg-white border-gray-200 rounded-md shadow-sm"
@@ -109,22 +112,6 @@ export default function Signup() {
                     className="w-6 h-6"
                   />
                 </button>
-              </div>
-
-              <div className="col-span-6">
-                <label for="MarketingAccept" className="flex gap-4">
-                  <input
-                    type="checkbox"
-                    id="MarketingAccept"
-                    name="marketing_accept"
-                    className="w-5 h-5 bg-white border-gray-200 rounded-md shadow-sm"
-                  />
-
-                  <span className="text-sm text-gray-700">
-                    I want to receive emails about events, product updates and
-                    company announcements.
-                  </span>
-                </label>
               </div>
 
               <div className="col-span-6">
