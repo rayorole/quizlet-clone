@@ -27,7 +27,7 @@ export default function Nav() {
           <div className="items-center justify-end flex-1 hidden gap-4 sm:flex">
             <a
               className="px-5 py-2 text-sm font-medium text-gray-500 bg-gray-100 rounded-lg"
-              href=""
+              href="/login"
             >
               Log in
             </a>
