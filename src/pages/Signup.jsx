@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Login() {
+export default function Signup() {
   return (
     <section className="bg-white">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
