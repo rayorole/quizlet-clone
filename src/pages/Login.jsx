@@ -34,8 +34,7 @@ export default function Login() {
             </h1>
 
             <p className="mt-4 leading-relaxed text-gray-500">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              nam dolorum aliquam, quibusdam aperiam voluptatum.
+              Ripoff quizlet cuz they went paid. we ar free and superior.
             </p>
 
             <form action="#" className="mt-8 grid grid-cols-6 gap-6">
