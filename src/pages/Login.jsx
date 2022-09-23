@@ -30,11 +30,11 @@ export default function Login() {
             </a>
 
             <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-              Welcome to Quizlet Clone 🦑
+              Welcome to Quizlet Clone
             </h1>
 
             <p className="mt-4 leading-relaxed text-gray-500">
-              Ripoff quizlet cuz they went paid. we ar free and superior.
+              Ripoff quizlet cuz they went paid. we are free and superior.
             </p>
 
             <form action="#" className="mt-8 grid grid-cols-6 gap-6">
