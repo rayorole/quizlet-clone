@@ -70,10 +70,10 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">Easy to use</h6>
+              <h6 className="mt-2 font-bold">personal sets</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                No ads, No useless info. just easy
+                create sets with your vocabulary.
               </p>
             </a>
 
@@ -101,10 +101,10 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">Accountant</h6>
+              <h6 className="mt-2 font-bold">set collection</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                Lorem ipsum dolor sit amet consectetur.
+                View all your sets by clicking "Sets" in the navigation bar.
               </p>
             </a>
 
@@ -131,10 +131,10 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">Accountant</h6>
+              <h6 className="mt-2 font-bold">user friendly</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                Lorem ipsum dolor sit amet consectetur.
+                No useless buttons, clean efficient ui.
               </p>
             </a>
 
@@ -162,10 +162,10 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">Accountant</h6>
+              <h6 className="mt-2 font-bold">open source</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                Lorem ipsum dolor sit amet consectetur.
+                ...
               </p>
             </a>
 
@@ -193,10 +193,10 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">Accountant</h6>
+              <h6 className="mt-2 font-bold">made by chads</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                Lorem ipsum dolor sit amet consectetur.
+                Made by 2 buffed giga chad students.
               </p>
             </a>
           </div>

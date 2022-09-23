@@ -17,8 +17,7 @@ export default function Hero() {
             <h2 className="text-3xl font-bold sm:text-4xl">Quizzie</h2>
 
             <p className="mt-4 text-gray-600">
-              Tired from using books to learn a vocabulary? Search no more,
-              Quizzie is an online learning platform.
+              Free to use online vocabulary learning page.
             </p>
 
             <a
