@@ -87,6 +87,31 @@ export default function Login() {
                 />
               </div>
 
+              <div className="col-span-6 flex space-x-3 items-center">
+                <button
+                  name="Google"
+                  className="text-sm border px-4 py-1.5 space-x-3 hover:bg-neutral-100 hover:border-gray-300 hover:shadow-md transition-all ease-in duration-50 font-semibold text-gray-700 flex items-center justify-between bg-white border-gray-200 rounded-md shadow-sm"
+                >
+                  <p>Google</p>
+                  <img
+                    src="https://freesvg.org/img/1534129544.png"
+                    alt="Google"
+                    className="w-6 h-6"
+                  />
+                </button>
+                <button
+                  name="Google"
+                  className="text-sm border px-4 py-1.5 space-x-3 hover:bg-neutral-100 hover:border-gray-300 hover:shadow-md transition-all ease-in duration-50 font-semibold text-gray-700 flex items-center justify-between bg-white border-gray-200 rounded-md shadow-sm"
+                >
+                  <p>Github</p>
+                  <img
+                    src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-github-1.png"
+                    alt="Google"
+                    className="w-6 h-6"
+                  />
+                </button>
+              </div>
+
               <div className="col-span-6">
                 <label for="MarketingAccept" className="flex gap-4">
                   <input
