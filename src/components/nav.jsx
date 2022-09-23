@@ -6,7 +6,7 @@ export default function Nav() {
       <div className="p-4 mx-auto max-w-screen-xl">
         <div className="flex items-center justify-between gap-4 lg:gap-10">
           <div className="flex lg:w-0 lg:flex-1">
-            <a className="block text-blue-600" href="/">
+            <a className="text-blue-600 flex items-center space-x-3" href="/">
               <span className="sr-only">Home</span>
               <svg
                 className="h-8 sm:h-10"
@@ -19,6 +19,7 @@ export default function Nav() {
                   fill="currentColor"
                 />
               </svg>
+              <h3 className="font-semibold text-xl font-mono">Quizzie</h3>
             </a>
           </div>
           <nav className="hidden text-sm font-medium gap-8 md:flex">
