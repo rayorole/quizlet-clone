@@ -16,7 +16,7 @@ export default function Features() {
       <div className="px-4 py-12 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            <a
+            <div
               data-aos="fade-right"
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
             >
@@ -44,9 +44,9 @@ export default function Features() {
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                 Learning should be free.
               </p>
-            </a>
+            </div>
 
-            <a
+            <div
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               data-aos="fade-right"
               data-aos-delay={100}
@@ -70,14 +70,14 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">personal sets</h6>
+              <h6 className="mt-2 font-bold">Personal sets</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                 create sets with your vocabulary.
               </p>
-            </a>
+            </div>
 
-            <a
+            <div
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               data-aos="fade-right"
               data-aos-delay={100}
@@ -101,14 +101,14 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">set collection</h6>
+              <h6 className="mt-2 font-bold">Set collection</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                 View all your sets by clicking "Sets" in the navigation bar.
               </p>
-            </a>
+            </div>
 
-            <a
+            <div
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               data-aos="fade-right"
             >
@@ -131,14 +131,14 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">user friendly</h6>
+              <h6 className="mt-2 font-bold">User friendly</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                 No useless buttons, clean efficient ui.
               </p>
-            </a>
+            </div>
 
-            <a
+            <div
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               data-aos="fade-right"
               data-aos-delay={100}
@@ -162,14 +162,14 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">open source</h6>
+              <h6 className="mt-2 font-bold">Open source</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                 free and open source code available on Github
               </p>
-            </a>
+            </div>
 
-            <a
+            <div
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               data-aos="fade-right"
               data-aos-delay={200}
@@ -193,12 +193,12 @@ export default function Features() {
                 </svg>
               </span>
 
-              <h6 className="mt-2 font-bold">made by chads</h6>
+              <h6 className="mt-2 font-bold">Made by chads</h6>
 
               <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                 Made by 2 buffed giga chad students.
               </p>
-            </a>
+            </div>
           </div>
           <div className="max-w-lg mx-auto text-center lg:text-left lg:mx-0">
             <h2 className="text-3xl font-bold sm:text-4xl">Features</h2>
