@@ -3,7 +3,7 @@ import React from 'react';
 export default function Hero() {
   return (
     <section>
-      <div className="px-4 py-16 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+      <div className="px-4 pt-16 pb-16 lg:pb-0 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
           <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last">
             <img
