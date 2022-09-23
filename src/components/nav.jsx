@@ -9,7 +9,7 @@ export default function Nav() {
             <span className="w-20 h-10 bg-gray-200 rounded-lg"></span>
           </div>
           <nav className="hidden text-sm font-medium gap-8 md:flex">
-            <a className="text-gray-500" href="/app">
+            <a className="text-gray-500" href="">
               Home
             </a>
             <a className="text-gray-500" href="">
