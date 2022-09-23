@@ -25,7 +25,7 @@ export default function Cta() {
               <input
                 type="email"
                 placeholder="Email address"
-                className="w-full p-2 text-gray-700 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-blue-400 focus:border-white"
+                className="w-full p-2 px-3 text-gray-700 font-semibold text-neutral-700 placeholder:text-sm placeholder:font-semibold placeholder:text-neutral-400 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-indigo-500 focus:border-white"
               />
             </div>
 

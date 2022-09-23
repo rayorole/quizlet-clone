@@ -12,12 +12,20 @@ export default function Footer() {
               fill="currentColor"
             />
 
-            <p className="max-w-xs mt-4 text-sm text-gray-500">...</p>
+            <p className="max-w-xs mt-4 text-sm text-gray-500">
+              Alexander Mannaerts
+            </p>
+            <a
+              href="mailto:ray.orole@gmail.com"
+              className="max-w-xs mt-0.5 text-sm text-gray-500 hover:underline"
+            >
+              Ray Orolé
+            </a>
 
             <div className="flex mt-8 text-gray-500 gap-6">
               <a
                 className="hover:opacity-75"
-                href=""
+                href="/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -39,7 +47,7 @@ export default function Footer() {
 
               <a
                 className="hover:opacity-75"
-                href=""
+                href="/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -61,7 +69,7 @@ export default function Footer() {
 
               <a
                 className="hover:opacity-75"
-                href=""
+                href="/"
                 target="_blank"
                 rel="noreferrer"
               >
