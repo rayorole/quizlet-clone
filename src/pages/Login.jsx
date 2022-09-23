@@ -1,32 +1,14 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { LockClosedIcon } from '@heroicons/react/solid';
 
 export default function Login() {
+  const signInWithGoogle = async () => {
+    try {
+    } catch (err) {
+      console.error(err);
+    }
+  };
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-50">
-        <body class="h-full">
-        ```
-      */}
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
@@ -90,6 +72,7 @@ export default function Login() {
               </label>
               <div className="flex space-x-3 items-center">
                 <button
+                  onClick={signInWithGoogle}
                   name="Google"
                   className="text-sm border px-4 py-1.5 space-x-3 hover:bg-neutral-100 hover:border-gray-300 hover:shadow-md transition-all ease-in duration-50 font-semibold text-gray-700 flex items-center justify-between bg-white border-gray-200 rounded-md shadow-sm"
                 >
