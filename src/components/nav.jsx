@@ -8,19 +8,18 @@ export default function Nav() {
           <div className="flex lg:w-0 lg:flex-1">
             <span className="w-20 h-10 bg-gray-200 rounded-lg"></span>
           </div>
-
           <nav className="hidden text-sm font-medium gap-8 md:flex">
             <a className="text-gray-500" href="">
-              About
+              Home
             </a>
             <a className="text-gray-500" href="">
-              Blog
+              Sets
             </a>
             <a className="text-gray-500" href="">
-              Projects
+              New set
             </a>
             <a className="text-gray-500" href="">
-              Contact
+              Credits
             </a>
           </nav>
 
