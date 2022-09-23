@@ -5,6 +5,11 @@ export default function Credits() {
   return (
     <div>
       <Nav />
+      <h1 className=''>
+        RAY OROLE
+        <br></br>
+        ALEXANDER MANNAERTS
+      </h1>
     </div>
   );
 }
