@@ -13,7 +13,7 @@ export default function Features() {
   }, []);
   return (
     <section className="bg-gray-50">
-      <div className="px-4 py-24 max-w-screen-xl sm:px-6 lg:px-8">
+      <div className="px-4 py-32 max-w-screen-xl sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             <a
