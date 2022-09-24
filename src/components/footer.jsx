@@ -33,7 +33,7 @@ export default function Footer() {
                 <a className="hover:opacity-75" href="">
                   About
                 </a>
-                <a className="hover:opacity-75" href="">
+                <a className="hover:opacity-75" href="/Credits">
                   Meet the Team
                 </a>
                 <a className="hover:opacity-75" href="">
