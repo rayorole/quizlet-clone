@@ -83,9 +83,6 @@ export default function Footer() {
                   Terms & Conditions
                 </a>
                 <a className="hover:opacity-75" href="">
-                  Returns Policy
-                </a>
-                <a className="hover:opacity-75" href="">
                   Accessibility
                 </a>
               </nav>
