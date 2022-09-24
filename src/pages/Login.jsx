@@ -7,11 +7,14 @@ import {
 } from 'firebase/auth';
 import { auth } from '../firebase';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 export default function Login() {
   const email = useRef();
   const password = useRef();
+
+  const [invalidPwd, setInvalidPwd] = useState(false);
+  const [invalidMail, setInvalidMail] = useState(false);
 
   const signInWithGoogle = async () => {
     signInWithPopup(auth, new GoogleAuthProvider())
@@ -38,7 +41,15 @@ export default function Login() {
       .then((res) => {
         window.location.replace('/sets');
       })
-      .catch((err) => alert(err.message));
+      .catch((err) => {
+        if (err.code === 'auth/wrong-password') {
+          setInvalidPwd(true);
+        } else if (err.code === 'auth/user-not-found') {
+          setInvalidMail(true);
+        } else {
+          alert(err.message);
+        }
+      });
   };
 
   return (
@@ -70,8 +81,20 @@ export default function Login() {
               </a>
             </p>
           </div>
-          <form className="mt-8 space-y-6" action="#" method="POST">
+          <div className="mt-8 space-y-6">
             <div>
+              <div className="my-1">
+                {invalidPwd ? (
+                  <p className="text-red-400 font-semibold text-xs">
+                    Invalid password
+                  </p>
+                ) : null}
+                {invalidMail ? (
+                  <p className="text-red-400 font-semibold text-xs">
+                    Invalid email
+                  </p>
+                ) : null}
+              </div>
               <div className="-space-y-px rounded-md shadow-sm">
                 <div>
                   <label htmlFor="email-address" className="sr-only">
@@ -84,7 +107,9 @@ export default function Login() {
                     type="email"
                     autoComplete="email"
                     required
-                    className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    className={`relative block w-full appearance-none rounded-none rounded-t-md border ${
+                      invalidMail ? 'border-red-400' : 'border-gray-300'
+                    } px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm`}
                     placeholder="Email address"
                   />
                 </div>
@@ -99,7 +124,9 @@ export default function Login() {
                     type="password"
                     autoComplete="current-password"
                     required
-                    className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    className={`relative block w-full appearance-none rounded-none rounded-b-md border ${
+                      invalidPwd ? 'border-red-400' : 'border-gray-300'
+                    } px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm`}
                     placeholder="Password"
                   />
                 </div>
@@ -172,7 +199,7 @@ export default function Login() {
                 Sign in
               </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </>
