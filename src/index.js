@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Credits from './pages/Credits';
 import Sets from './pages/Sets';
+import CreateSet from './pages/CreateSet';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
         <Route path="/login" element={<Login />} />
         <Route path="/credits" element={<Credits />} />
         <Route path="/sets" element={<Sets />} />
+        <Route path="/sets/create" element={<CreateSet />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

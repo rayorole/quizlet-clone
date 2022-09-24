@@ -19,7 +19,7 @@ export default function Sets() {
               Get started by creating a new set.
             </p>
             <a
-              href="/dashboard/projects/create"
+              href="/sets/create"
               className="mt-6 flex items-center justify-center space-x-2 rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
             >
               <PlusIcon className="h-4 w-4" />
