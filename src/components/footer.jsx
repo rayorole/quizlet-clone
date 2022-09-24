@@ -44,9 +44,6 @@ export default function Footer() {
                 <a className="hover:opacity-75" href="/">
                   History
                 </a>
-                <a className="hover:opacity-75" href="/">
-                  Careers
-                </a>
               </nav>
             </div>
 
