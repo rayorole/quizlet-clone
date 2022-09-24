@@ -36,7 +36,10 @@ export default function Nav() {
               Home
             </a>
             <a className="text-gray-500" href="/sets">
-              Sets
+              Browse Sets
+            </a>
+            <a className="text-gray-500" href="/sets">
+              My Sets
             </a>
             <a className="text-gray-500" href="/credits">
               Credits
@@ -44,6 +47,11 @@ export default function Nav() {
           </nav>
 
           <div className="items-center justify-end flex-1 hidden gap-4 sm:flex">
+            <input
+              className="px-3 flex items-center border border-neutral-300 justify-between space-x-2 py-2 text-sm font-medium text-gray-500 rounded-lg"
+              type="text"
+              placeholder="Search study sets..."
+            />
             {signed ? (
               <button
                 onClick={logOut}
