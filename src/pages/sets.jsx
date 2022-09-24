@@ -18,12 +18,18 @@ export default function Sets() {
             <p className="text-sm font-normal text-gray-500">
               Get started by creating a new set.
             </p>
+
             <a
+              className="relative mt-4 inline-flex items-center px-6 py-2 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
               href="/sets/create"
-              className="mt-6 flex items-center justify-center space-x-2 rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
             >
-              <PlusIcon className="h-4 w-4" />
-              <span>New Set</span>
+              <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
+                <PlusIcon className="h-4 w-4" />
+              </span>
+
+              <span className="text-sm font-medium transition-all group-hover:mr-4">
+                New Set
+              </span>
             </a>
           </div>
         </div>
