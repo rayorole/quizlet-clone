@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Credits from './pages/Credits';
 import Sets from './pages/Sets';
 import CreateSet from './pages/CreateSet';
+import BrowseSets from './pages/BrowseSets';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,7 @@ root.render(
         <Route path="/credits" element={<Credits />} />
         <Route path="/sets" element={<Sets />} />
         <Route path="/sets/create" element={<CreateSet />} />
+        <Route path="/sets/browse" element={<BrowseSets />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
