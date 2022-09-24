@@ -25,17 +25,17 @@ export default function Cta() {
               <input
                 type="email"
                 placeholder="Email address"
-                className="w-full p-2 px-3 text-gray-700 font-semibold text-neutral-700 placeholder:text-sm placeholder:font-semibold placeholder:text-neutral-400 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-indigo-500 focus:border-white"
+                className="w-full p-2 px-3 font-semibold text-neutral-700 placeholder:text-sm placeholder:font-semibold placeholder:text-neutral-400 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-indigo-500 focus:border-white"
               />
             </div>
 
-            <button
-              type="submit"
+            <a
+              href="/signup"
               className="flex items-center hover:bg-indigo-700 duration-100 justify-center w-full space-x-2 px-5 py-3 mt-4 text-white transition rounded-md bg-indigo-600 sm:mt-0 sm:w-auto group focus:outline-none focus:ring focus:ring-blue-400"
             >
               <span className="text-sm font-medium">Sign Up</span>
               <FingerPrintIcon className="w-4 h-4" />
-            </button>
+            </a>
           </form>
         </div>
       </div>

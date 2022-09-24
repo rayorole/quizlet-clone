@@ -20,7 +20,7 @@ export default function Nav() {
       <div className="p-4 mx-auto max-w-screen-xl">
         <div className="flex items-center justify-between gap-4 lg:gap-10">
           <div className="flex lg:w-0 lg:flex-1">
-            <a className="text-blue-600 flex items-center space-x-3" href="/">
+            <a className="text-indigo-600 flex items-center space-x-3" href="/">
               <span className="sr-only">Home</span>
               <img src="logo.png" width={50} alt="Quizzie" />
               <path
