@@ -17,7 +17,7 @@ export default function CreateSet() {
   return (
     <div>
       <Nav />
-      <div className="max-w-screen-xl mx-auto my-12">
+      <div className="max-w-screen-xl mx-auto my-12 px-8">
         <div>
           <div className="md:grid md:grid-cols-3 md:gap-6">
             <div className="md:col-span-1">

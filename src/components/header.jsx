@@ -19,8 +19,8 @@ export default function Header() {
         </h1>
 
         <p className="mt-1.5 text-sm text-gray-500">
-          Your website has seen a 52% increase in traffic in the last month.
-          Keep it up! 🚀
+          Here you can find an overview of al your sets you created, feel free
+          to create a new set! 🚀
         </p>
       </div>
     </header>
