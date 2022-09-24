@@ -19,9 +19,9 @@ export default function Footer() {
 
             <div className="flex mt-8 text-gray-500 gap-6">
               <strong className="inline-flex items-center gap-2 p-2 text-sm font-medium border border-gray-200 rounded">
-                <span> Status: </span>
+                <span>Status:</span>
 
-                <span className="w-3 h-3 bg-green-600 rounded-full"></span>
+                <span className="w-3 h-3 bg-green-600 rounded-full" />
 
                 <span className="font-medium text-green-600">
                   All systems operational
@@ -35,14 +35,17 @@ export default function Footer() {
               <p className="font-medium">Team</p>
 
               <nav className="flex flex-col mt-4 text-sm text-gray-500 space-y-2">
-                <a className="hover:opacity-75" href="">
+                <a className="hover:opacity-75" href="/">
                   About
                 </a>
                 <a className="hover:opacity-75" href="/Credits">
                   Meet the Team
                 </a>
-                <a className="hover:opacity-75" href="">
+                <a className="hover:opacity-75" href="/">
                   History
+                </a>
+                <a className="hover:opacity-75" href="/">
+                  Careers
                 </a>
               </nav>
             </div>
