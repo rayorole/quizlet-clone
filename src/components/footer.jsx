@@ -22,7 +22,17 @@ export default function Footer() {
               Ray Orolé
             </a>
 
-            <div className="flex mt-8 text-gray-500 gap-6"></div>
+            <div className="flex mt-8 text-gray-500 gap-6">
+              <strong className="inline-flex items-center gap-2 p-2 text-sm font-medium border border-gray-200 rounded">
+                <span> Status: </span>
+
+                <span className="w-3 h-3 bg-green-600 rounded-full"></span>
+
+                <span className="font-medium text-green-600">
+                  All systems operational
+                </span>
+              </strong>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
