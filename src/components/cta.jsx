@@ -28,13 +28,17 @@ export default function Cta() {
                 className="w-full p-2 px-3 font-semibold text-neutral-700 placeholder:text-sm placeholder:font-semibold placeholder:text-neutral-400 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-indigo-500 focus:border-white"
               />
             </div>
-
             <a
-              href="/signup"
-              className="flex items-center hover:bg-indigo-700 duration-100 justify-center w-full space-x-2 px-5 py-3 mt-4 text-white transition rounded-md bg-indigo-600 sm:mt-0 sm:w-auto group focus:outline-none focus:ring focus:ring-blue-400"
+              className="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
+              href="/Login"
             >
-              <span className="text-sm font-medium">Sign Up</span>
-              <FingerPrintIcon className="w-4 h-4" />
+              <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
+                <FingerPrintIcon className="w-4 h-4" />
+              </span>
+
+              <span className="text-sm font-medium transition-all group-hover:mr-4">
+                Log In
+              </span>
             </a>
           </form>
         </div>

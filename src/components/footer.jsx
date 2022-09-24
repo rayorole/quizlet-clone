@@ -44,9 +44,6 @@ export default function Footer() {
                 <a className="hover:opacity-75" href="/">
                   History
                 </a>
-                <a className="hover:opacity-75" href="/">
-                  Careers
-                </a>
               </nav>
             </div>
 
@@ -84,9 +81,6 @@ export default function Footer() {
                 </a>
                 <a className="hover:opacity-75" href="">
                   Terms & Conditions
-                </a>
-                <a className="hover:opacity-75" href="">
-                  Returns Policy
                 </a>
                 <a className="hover:opacity-75" href="">
                   Accessibility
