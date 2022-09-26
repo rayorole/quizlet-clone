@@ -16,7 +16,7 @@ export default function Nav() {
   }
 
   return (
-    <header className="shadow-sm">
+    <header className="shadow-lg">
       <div className="p-4 mx-auto max-w-screen-xl">
         <div className="flex items-center justify-between gap-4 lg:gap-10">
           <div className="flex lg:w-0 lg:flex-1">
