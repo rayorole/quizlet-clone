@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Cta() {
   return (
-    <aside className="relative">
+    <aside>
       <div className="p-8 md:p-12 lg:px-16 lg:py-24">
         <div className="max-w-lg mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
@@ -10,7 +10,7 @@ export default function Cta() {
           </h2>
 
           <p className="hidden text-gray-500 sm:mt-4 sm:block">
-            ofc there are no questions cuz we are a perfect site ;)
+            Ofc there are no questions cuz we are a perfect site ;)
           </p>
         </div>
 
@@ -52,7 +52,6 @@ export default function Cta() {
           </form>
         </div>
       </div>
-      <img src="/waves.svg" alt="Waves" className="absolute left-0 top-0" />
     </aside>
   );
 }

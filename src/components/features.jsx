@@ -83,7 +83,7 @@ export default function Features() {
               className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               href="/accountant"
               data-aos="fade-right"
-              data-aos-delay={100}
+              data-aos-delay={200}
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
                 <svg
