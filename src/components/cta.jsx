@@ -1,9 +1,10 @@
+import { FingerPrintIcon } from '@heroicons/react/solid';
 import React from 'react';
 
 export default function Cta() {
   return (
-    <aside>
-      <div className="p-8 md:p-12 lg:px-16 lg:py-24">
+    <aside className="relative">
+      <div className="p-8 md:p-12 lg:px-16 lg:py-24 z-10">
         <div className="max-w-lg mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
             Have a question?
@@ -24,34 +25,25 @@ export default function Cta() {
               <input
                 type="email"
                 placeholder="Email address"
-                className="w-full p-3 text-gray-700 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-blue-400 focus:border-white"
+                className="w-full p-2 px-3 font-semibold text-neutral-700 placeholder:text-sm placeholder:font-semibold placeholder:text-neutral-400 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-indigo-500 focus:border-white"
               />
             </div>
-
-            <button
-              type="submit"
-              className="flex items-center justify-center w-full px-5 py-3 mt-4 text-white transition rounded-md bg-blue-600 sm:mt-0 sm:w-auto group focus:outline-none focus:ring focus:ring-blue-400"
+            <a
+              className="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
+              href="/Login"
             >
-              <span className="text-sm font-medium"> Sign Up </span>
+              <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
+                <FingerPrintIcon className="w-4 h-4" />
+              </span>
 
-              <svg
-                className="w-5 h-5 ml-3"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </button>
+              <span className="text-sm font-medium transition-all group-hover:mr-4">
+                Log In
+              </span>
+            </a>
           </form>
         </div>
       </div>
+      <img src="/waves.svg" alt="Waves" className="absolute left-0 top-0 z-0" />
     </aside>
   );
 }
