@@ -141,7 +141,7 @@ export default function CreateSet() {
                   Terms &amp; definitions
                 </h3>
                 <p className="mt-1 text-sm text-gray-600">
-                  Use a permanent address where you can receive mail.
+                  Enter your terms and their definitions here.
                 </p>
               </div>
             </div>

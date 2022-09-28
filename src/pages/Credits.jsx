@@ -4,26 +4,59 @@ import Footer from '../components/footer';
 
 export default function Features() {
   return (
-    <div>
+    <div className="bg-gray-50">
       <Nav />
-      <section className="bg-gray-50">
-        <div className="flex gap-10 pl-80 pt-24 ">
-          <div className=" p-6 border text-neutral-700 border-gray-300 rounded-xl">
-            <h7 className="mt-2 font-bold"> (cringe) </h7>
-            <h6 className="mt-2 font-bold">Ray Orole</h6>
-            <br></br>
-            <h7 className="mt-2 font-bold">-main coder and database builder</h7>
-
-            <img src="ray.png" width={350} />
+      <section className="max-w-screen-xl mx-auto">
+        <div className="my-12 flex">
+          <div className="space-y-8">
+            <div className="w-2/6">
+              <h1 className="font-bold text-3xl text-neutral-700">
+                Meet our team
+              </h1>
+              <p className="font-sans text-neutral-400">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Perferendis dicta ea dolorem consequuntur magni officia ducimus
+                vero rem porro eaque, unde nihil tempore eum nulla sit earum
+                neque qui facere?
+              </p>
+            </div>
+            <div className="flex-1 space-y-5">
+              <div className="flex space-x-5 items-center">
+                <img
+                  className="w-24 h-24 rounded-full border-2 border-neutral-300"
+                  src="/ray.png"
+                  alt="Ray"
+                />
+                <div>
+                  <p className="font-bold text-neutral-700">Ray Orolé</p>
+                  <p className="text-indigo-600 font-semibold text-sm">
+                    database engineer, main coder, cringe femboy
+                  </p>
+                </div>
+              </div>
+              <div className="flex space-x-5 items-center">
+                <img
+                  className="w-24 h-24 rounded-full border-2 border-neutral-300"
+                  src="/alexander.png"
+                  alt="Ray"
+                />
+                <div>
+                  <p className="font-bold text-neutral-700">
+                    Alexander Mannaerts
+                  </p>
+                  <p className="text-indigo-600 font-semibold text-sm">
+                    UI designer, project planning, real chad
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div className=" p-6 border text-neutral-700 border-gray-300 shadow-sm rounded-xl">
-            <h8 className="mt-2 font-bold"> (giga chad) </h8>
-            <h6 className="mt-2 font-bold">Alexander Mannaerts</h6>
-            <br></br>
-            <h7 className="mt-2 font-bold"> -the main idea and gui</h7>
-
-            <img src="alexander.png" width={350} />
+          <div className="relative h-72 overflow-hidden rounded-lg sm:h-80 lg:h-full lg:order-last">
+            <img
+              alt="Party"
+              src="/undraw-credits.svg"
+              className=" inset-0 object-contain w-full h-full"
+            />
           </div>
         </div>
       </section>

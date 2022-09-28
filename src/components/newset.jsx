@@ -15,6 +15,7 @@ export default function Newset() {
     abc[e.target.className] = e.target.value;
     setInputValues({ ...inputValues, ...abc });
   };
+
   return (
     <div>
       <button type="button" onClick={handleClick}>
@@ -22,43 +23,45 @@ export default function Newset() {
       </button>
       {Array.from(Array(counter)).map((c, index) => {
         return (
-          <div key={index} className="grid grid-cols-4 gap-6 content-center">
-            <div className="col-span-3 sm:col-span-3">
+          <div
+            key={index}
+            className="flex items-center justify-between space-x-3 my-2"
+          >
+            <div className="w-full flex-1">
               <label
-                htmlFor="first-name"
+                htmlFor="term"
                 className="block text-sm font-medium text-gray-700"
               >
                 Term
               </label>
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
-                autoComplete="given-name"
+                name="term"
+                id="term"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               />
             </div>
 
-            <div className="col-span-3 sm:col-span-3">
+            <div className="w-full flex-1">
               <label
-                htmlFor="last-name"
+                htmlFor="definition"
                 className="block text-sm font-medium text-gray-700"
               >
                 Definition
               </label>
               <input
                 type="text"
-                name="last-name"
-                id="last-name"
-                autoComplete="family-name"
+                name="definition"
+                id="definition"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               />
             </div>
 
-            <div className="col-span-3 sm:col-span-3">
-              <div className="w-8 h-8 rounded bg-neutral-200 flex items-center justify-center">
-                <PhotographIcon className="w-6 h-6 text-neutral-400" />
-              </div>
+            <div>
+              <input
+                type="file"
+                className="w-10 h-10 rounded bg-neutral-200 flex items-center justify-center"
+              />
             </div>
           </div>
         );
