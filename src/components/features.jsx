@@ -59,7 +59,7 @@ export default function Features() {
             <div
               className="block p-4 border cursor-default text-neutral-700 border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
               data-aos="fade-right"
-              data-aos-delay={100}
+              data-aos-delay={200}
             >
               <span className="inline-block p-3 rounded-lg bg-gray-50">
                 <TemplateIcon className="w-6 h-6" />

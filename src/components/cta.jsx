@@ -11,7 +11,7 @@ export default function Cta() {
           </h2>
 
           <p className="hidden text-gray-500 sm:mt-4 sm:block">
-            ofc there are no questions cuz we are a perfect site ;)
+            Ofc there are no questions cuz we are a perfect site ;)
           </p>
         </div>
 
