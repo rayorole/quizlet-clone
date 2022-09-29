@@ -13,17 +13,12 @@ export default function Features() {
               <h1 className="font-bold text-3xl text-neutral-700">
                 Meet our team
               </h1>
-              <p className="font-sans text-neutral-400">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Perferendis dicta ea dolorem consequuntur magni officia ducimus
-                vero rem porro eaque, unde nihil tempore eum nulla sit earum
-                neque qui facere?
-              </p>
+              <p className="font-sans text-neutral-400">apes who made this.</p>
             </div>
             <div className="flex-1 space-y-5">
               <div className="flex space-x-5 items-center">
                 <img
-                  className="w-24 h-24 rounded-full border-2 border-neutral-300"
+                  className="w-48 h-48 rounded-full border-2 border-neutral-300"
                   src="/ray.png"
                   alt="Ray"
                 />
@@ -36,7 +31,7 @@ export default function Features() {
               </div>
               <div className="flex space-x-5 items-center">
                 <img
-                  className="w-24 h-24 rounded-full border-2 border-neutral-300"
+                  className="w-48 h-48 rounded-full border-2 border-neutral-300"
                   src="/alexander.png"
                   alt="Ray"
                 />
