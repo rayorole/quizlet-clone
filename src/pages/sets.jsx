@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/header';
 import Nav from '../components/nav';
+import Footer from '../components/footer';
 import { FolderAddIcon, PlusIcon } from '@heroicons/react/outline';
 
 export default function Sets() {
@@ -50,6 +51,7 @@ export default function Sets() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
