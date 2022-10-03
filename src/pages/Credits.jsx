@@ -9,16 +9,18 @@ export default function Features() {
       <section className="max-w-screen-xl mx-auto">
         <div className="my-12 flex">
           <div className="space-y-8">
-            <div className="w-2/6">
+            <div className="w-2/8">
               <h1 className="font-bold text-3xl text-neutral-700">
                 Meet our team
               </h1>
-              <p className="font-sans text-neutral-400">apes who made this.</p>
+              <p className="font-sans text-neutral-400">
+                clowns who made this.
+              </p>
             </div>
             <div className="flex-1 space-y-5">
               <div className="flex space-x-5 items-center">
                 <img
-                  className="w-48 h-48 rounded-full border-2 border-neutral-300"
+                  className="w-60 h-60 rounded-full border-2 border-neutral-300"
                   src="/ray.png"
                   alt="Ray"
                 />
@@ -31,7 +33,7 @@ export default function Features() {
               </div>
               <div className="flex space-x-5 items-center">
                 <img
-                  className="w-48 h-48 rounded-full border-2 border-neutral-300"
+                  className="w-60 h-60 rounded-full border-2 border-neutral-300"
                   src="/alexander.png"
                   alt="Ray"
                 />

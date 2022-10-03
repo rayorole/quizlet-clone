@@ -12,6 +12,9 @@ export default function BrowseSets() {
           placeholder="Search study sets..."
         />
       </div>
+      <div className="box-content h-16 w-16 border-4 pl-50">
+        <p>hi</p>
+      </div>
     </div>
   );
 }
