@@ -1,12 +1,18 @@
 import { PhotographIcon } from '@heroicons/react/solid';
+import { CheckIcon, PlusIcon, TemplateIcon } from '@heroicons/react/solid';
 import React, { useState } from 'react';
 
 export default function Newset() {
   const [inputValues, setInputValues] = useState({});
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
 
-  const handleClick = () => {
+  const addClick = () => {
     setCounter(counter + 1);
+    console.log(counter);
+  };
+
+  const reduceClick = () => {
+    setCounter(counter - 1);
     console.log(counter);
   };
 
@@ -18,9 +24,6 @@ export default function Newset() {
 
   return (
     <div>
-      <button type="button" onClick={handleClick}>
-        Hello
-      </button>
       {Array.from(Array(counter)).map((c, index) => {
         return (
           <div
@@ -57,15 +60,33 @@ export default function Newset() {
               />
             </div>
 
-            <div>
+            {/* <div>
               <input
                 type="file"
                 className="w-10 h-10 rounded bg-neutral-200 flex items-center justify-center"
               />
-            </div>
+            </div> */}
           </div>
         );
       })}
+
+      <button
+        type="button"
+        onClick={addClick}
+        className="inline-flex justify-center mx-3 space-x-2 rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700"
+      >
+        <span>Add new word</span>
+        <PlusIcon className="w-5 h-5" />
+      </button>
+
+      <button
+        type="button"
+        onClick={reduceClick}
+        className="inline-flex justify-center space-x-2 rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700"
+      >
+        <span>Delete last word</span>
+        <PlusIcon className="w-5 h-5" />
+      </button>
     </div>
   );
 }
