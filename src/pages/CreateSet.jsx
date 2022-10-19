@@ -7,10 +7,10 @@ import Newset from '../components/newset';
 
 export default function CreateSet() {
   const [inputValues, setInputValues] = useState({});
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(2);
 
   const handleClick = () => {
-    setCounter(counter + 1);
+    setCounter((counter) => counter + 1);
     console.log(counter);
   };
 
@@ -150,7 +150,7 @@ export default function CreateSet() {
                 <div className="overflow-hidden shadow sm:rounded-md">
                   <div className="bg-white px-4 py-5 sm:p-6">
                     <div>
-                      <Newset count={counter} />
+                      <Newset count={2} />
                     </div>
                   </div>
                   <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
