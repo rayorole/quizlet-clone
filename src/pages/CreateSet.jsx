@@ -153,16 +153,7 @@ export default function CreateSet() {
                       <Newset count={2} />
                     </div>
                   </div>
-                  <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
-                    <button
-                      type="button"
-                      onClick={handleClick}
-                      className="inline-flex justify-center space-x-2 rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    >
-                      <span>Add a definition</span>
-                      <PlusIcon className="w-5 h-5" />
-                    </button>
-                  </div>
+                  
                 </div>
               </form>
             </div>
