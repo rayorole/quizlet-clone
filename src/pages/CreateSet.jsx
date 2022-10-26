@@ -6,25 +6,20 @@ import { CheckIcon, PlusIcon, TemplateIcon } from '@heroicons/react/solid';
 import Newset from '../components/newset';
 
 export default function CreateSet() {
-  const [inputValues, setInputValues] = useState({});
-  const [counter, setCounter] = useState(2);
-
-  const handleClick = () => {
-    setCounter((counter) => counter + 1);
-    console.log(counter);
-  };
-
-  const handleOnChange = (e) => {
-    const abc = {};
-    abc[e.target.className] = e.target.value;
-    setInputValues({ ...inputValues, ...abc });
-  };
   const auth = getAuth();
+
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       window.location.replace('/');
     }
   });
+
+  const handleImg = () => {
+    const file = this.refs.file.files[0];
+    const reader = new FileReader();
+    const url = reader.readAsDataURL(file);
+    console.log(url);
+  };
 
   return (
     <div>
@@ -56,6 +51,7 @@ export default function CreateSet() {
                         </label>
                         <div className="mt-1 flex rounded-md shadow-sm">
                           <input
+                            required
                             type="text"
                             name="title"
                             id="title"
@@ -75,6 +71,7 @@ export default function CreateSet() {
                       </label>
                       <div className="mt-1">
                         <textarea
+                          required
                           id="about"
                           name="about"
                           rows={3}
@@ -96,6 +93,7 @@ export default function CreateSet() {
                         </label>
                         <div className="mt-1 flex rounded-md shadow-sm">
                           <input
+                            required
                             type="text"
                             name="school"
                             id="school"
@@ -114,6 +112,8 @@ export default function CreateSet() {
                           <TemplateIcon className="h-14 w-14 text-gray-300" />
                         </div>
                         <input
+                          required
+                          onChange={handleImg}
                           type="file"
                           accept="image/*"
                           className="ml-5 file:hidden w-40 cursor-pointer rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -146,16 +146,13 @@ export default function CreateSet() {
               </div>
             </div>
             <div className="mt-5 md:col-span-2 md:mt-0">
-              <form action="#" method="POST">
-                <div className="overflow-hidden shadow sm:rounded-md">
-                  <div className="bg-white px-4 py-5 sm:p-6">
-                    <div>
-                      <Newset count={2} />
-                    </div>
+              <div className="overflow-hidden shadow sm:rounded-md">
+                <div className="bg-white px-4 py-5 sm:p-6">
+                  <div>
+                    <Newset />
                   </div>
-                  
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -193,13 +190,13 @@ export default function CreateSet() {
                       <div className="mt-4 space-y-4">
                         <div className="flex items-center">
                           <input
-                            id="editable-me"
+                            id="readable-me"
                             name="viewable"
                             type="radio"
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                           />
                           <label
-                            htmlFor="push-everything"
+                            htmlFor="readable-me"
                             className="ml-3 block text-sm font-medium text-gray-700"
                           >
                             Just me
@@ -207,13 +204,13 @@ export default function CreateSet() {
                         </div>
                         <div className="flex items-center">
                           <input
-                            id="editable-pass"
+                            id="readable-pass"
                             name="viewable"
                             type="radio"
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                           />
                           <label
-                            htmlFor="editable-pass"
+                            htmlFor="readable-pass"
                             className="ml-3 block text-sm font-medium text-gray-700"
                           >
                             People with a password
@@ -221,13 +218,13 @@ export default function CreateSet() {
                         </div>
                         <div className="flex items-center">
                           <input
-                            id="editable-everyone"
+                            id="readable-everyone"
                             name="viewable"
                             type="radio"
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                           />
                           <label
-                            htmlFor="editable-everyone"
+                            htmlFor="readable-everyone"
                             className="ml-3 block text-sm font-medium text-gray-700"
                           >
                             Everyone
@@ -249,7 +246,7 @@ export default function CreateSet() {
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                           />
                           <label
-                            htmlFor="push-everything"
+                            htmlFor="editable-me"
                             className="ml-3 block text-sm font-medium text-gray-700"
                           >
                             Just me

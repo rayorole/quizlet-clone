@@ -4,8 +4,8 @@ import { CheckIcon, PlusIcon, TemplateIcon } from '@heroicons/react/solid';
 import React, { useState } from 'react';
 
 export default function Newset(props) {
-  const [inputValues, setInputValues] = useState([]);
   const [counter, setCounter] = useState(3);
+  const [terms, setTerms] = useState([]);
 
   const addClick = () => {
     if (counter < 20) setCounter(counter + 1);
@@ -15,15 +15,12 @@ export default function Newset(props) {
     if (counter > 1) setCounter(counter - 1);
   };
 
-  const handleOnChange = (e) => {
-    const abc = {};
-    abc[e.target.className] = e.target.value;
-    setInputValues({ ...inputValues, ...abc });
-  };
-
   return (
     <div>
       <div className="max-h-screen overflow-y-auto px-2">
+        <button type="button" onClick={() => console.log(terms)}>
+          Click
+        </button>
         {Array.from(Array(counter)).map((c, index) => {
           return (
             <div
@@ -39,6 +36,19 @@ export default function Newset(props) {
                 </label>
                 <input
                   type="text"
+                  termid={index}
+                  onChange={(e) => {
+                    let newArr = [...terms]; // copying the old datas array
+                    // a deep copy is not needed as we are overriding the whole object below, and not setting a property of it. this does not mutate the state.
+                    newArr[e.target.attributes.getNamedItem('termid').value] = {
+                      ...newArr[
+                        e.target.attributes.getNamedItem('termid').value
+                      ],
+                      term: e.target.value,
+                    };
+
+                    setTerms(newArr);
+                  }}
                   name="term"
                   id="term"
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
@@ -55,6 +65,19 @@ export default function Newset(props) {
                 <input
                   type="text"
                   name="definition"
+                  defid={index}
+                  onChange={(e) => {
+                    let newArr = [...terms]; // copying the old datas array
+                    // a deep copy is not needed as we are overriding the whole object below, and not setting a property of it. this does not mutate the state.
+                    newArr[e.target.attributes.getNamedItem('defid').value] = {
+                      ...newArr[
+                        e.target.attributes.getNamedItem('defid').value
+                      ],
+                      definition: e.target.value,
+                    };
+
+                    setTerms(newArr);
+                  }}
                   id="definition"
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
