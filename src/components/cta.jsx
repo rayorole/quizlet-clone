@@ -18,27 +18,25 @@ export default function Cta() {
         <div className="max-w-xl mx-auto mt-8">
           <form action="#" className="sm:gap-4 sm:flex">
             <div className="sm:flex-1">
-              <label for="email" className="sr-only">
-                Email
-              </label>
+              <label for="email" className="sr-only"></label>
 
               <input
                 type="email"
-                placeholder="Email address"
+                placeholder="Type question or call +32 491 89 78 04 for help."
                 className="w-full p-2 px-3 font-semibold text-neutral-700 placeholder:text-sm placeholder:font-semibold placeholder:text-neutral-400 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-indigo-500 focus:border-white"
               />
             </div>
-            <a
-              className="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
-              href="/Login"
-            >
+            <a className="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring">
               <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
                 <FingerPrintIcon className="w-4 h-4" />
               </span>
 
-              <span className="text-sm font-medium transition-all group-hover:mr-4">
-                Log In
-              </span>
+              <a
+                href="mailto:ray.orole@gmail.com"
+                className="text-sm font-medium transition-all group-hover:mr-4"
+              >
+                Send
+              </a>
             </a>
           </form>
         </div>
