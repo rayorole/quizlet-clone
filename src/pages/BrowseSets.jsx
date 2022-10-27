@@ -4,6 +4,7 @@ import Nav from '../components/nav';
 import Footer from '../components/footer';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
+import { timeConverter } from '../utils';
 
 export default function BrowseSets() {
   const [sets, setSets] = useState([]);
@@ -48,10 +49,23 @@ export default function BrowseSets() {
         </div>
         <div class="grid grid-cols-3 gap-4 my-8 lg:grid-cols-4">
           {sets?.map((set) => (
-            <div className="w-full shadow h-36 bg-neutral-50 rounded-lg border-2 border-zinc-100 p-3">
+            <div className="relative w-full shadow h-36 bg-neutral-50 rounded-lg border-2 border-zinc-100 p-3">
               <h2 className="font-semibold text-lg text-stone-600">
                 {set.title}
               </h2>
+
+              <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-indigo-600 bg-indigo-200 uppercase last:mr-0 mr-1">
+                {set.terms.length} {set.terms.length === 1 ? 'term' : 'terms'}
+              </span>
+              <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-emerald-600 bg-emerald-200 uppercase last:mr-0 mr-1">
+                public
+              </span>
+              <div className="absolute left-0 bottom-0 p-2 text-stone-600 font-semibold text-xs">
+                {set.user || 'Anonymous'} &#x2022;{' '}
+                {set.timestamp?.seconds
+                  ? timeConverter(set.timestamp?.seconds)
+                  : 'N/A'}
+              </div>
             </div>
           ))}
         </div>
