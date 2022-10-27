@@ -1,7 +1,25 @@
-import { FingerPrintIcon } from '@heroicons/react/solid';
-import React from 'react';
+import React, { useRef } from 'react';
+import { CloudUploadIcon } from '@heroicons/react/outline';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase';
 
 export default function Cta() {
+  const emailRef = useRef();
+  const textRef = useRef();
+
+  const handleForm = async () => {
+    if (!emailRef.current.value || !textRef.current.value) {
+      alert('Please enter your email and/or message');
+    } else {
+      const docRef = await addDoc(collection(db, 'questions'), {
+        email: emailRef.current.value,
+        message: textRef.current.value,
+      });
+
+      console.log('Document uploaded with id of:', docRef.id);
+    }
+  };
+
   return (
     <aside className="relative">
       <div className="p-8 md:p-12 lg:px-16 lg:py-24 z-10">
@@ -11,34 +29,40 @@ export default function Cta() {
           </h2>
 
           <p className="hidden text-gray-500 sm:mt-4 sm:block">
-            Ofc there are no questions cuz we are a perfect site ;)
+            You can contact us with the following form. You will be replied back
+            via mail.
           </p>
         </div>
 
         <div className="max-w-xl mx-auto mt-8">
-          <form action="#" className="sm:gap-4 sm:flex">
-            <div className="sm:flex-1">
-              <label for="email" className="sr-only"></label>
+          <div className="sm:gap-4">
+            <div>
+              <label for="email" className="sr-only">
+                Email
+              </label>
 
               <input
                 type="email"
-                placeholder="Type question or call +32 491 89 78 04 for help."
-                className="w-full p-2 px-3 font-semibold text-neutral-700 placeholder:text-sm placeholder:font-semibold placeholder:text-neutral-400 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-indigo-500 focus:border-white"
+                ref={emailRef}
+                placeholder="Email address"
+                className="w-full p-2 px-3 font-semibold text-neutral-500 placeholder:text-sm placeholder:font-semibold placeholder:text-neutral-400 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-indigo-500 focus:border-white"
+              />
+
+              <textarea
+                placeholder="Enter your message here"
+                id="text"
+                ref={textRef}
+                className="w-full p-2 mt-3 px-3 font-semibold text-neutral-500 placeholder:text-sm placeholder:font-semibold placeholder:text-neutral-400 bg-white border-gray-200 transition rounded-md shadow-sm focus:ring focus:outline-none focus:ring-indigo-500 focus:border-white"
               />
             </div>
-            <a className="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring">
-              <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
-                <FingerPrintIcon className="w-4 h-4" />
-              </span>
-
-              <a
-                href="mailto:ray.orole@gmail.com"
-                className="text-sm font-medium transition-all group-hover:mr-4"
-              >
-                Send
-              </a>
-            </a>
-          </form>
+            <button
+              onClick={handleForm}
+              className="flex mt-5 items-center px-6 py-2.5 space-x-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
+            >
+              <span className="text-sm font-medium">Send</span>
+              <CloudUploadIcon className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
       <img src="/waves.svg" alt="Waves" className="absolute left-0 top-0 z-0" />

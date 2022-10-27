@@ -12,7 +12,6 @@ let terms;
 
 export function setTermsFn(arg) {
   terms = arg;
-  console.log('Terms:', terms);
 }
 
 export default function CreateSet() {
@@ -36,12 +35,11 @@ export default function CreateSet() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(terms);
 
-    const docRef = await addDoc(collection(db, 'terms'), {
+    const docRef = await addDoc(collection(db, 'sets'), {
       title: titleRef.current.value || alert('Enter a title please'),
-      about: aboutRef.current.value,
-      school: schoolRef.current.value,
+      about: aboutRef.current.value || alert('Enter an about please'),
+      school: schoolRef.current.value || alert('Enter a school please'),
       visibility: 'everyone',
       editable: 'everyone',
       terms: terms,
