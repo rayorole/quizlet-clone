@@ -1,4 +1,4 @@
-import { SearchIcon } from '@heroicons/react/outline';
+import { EyeIcon, SearchIcon } from '@heroicons/react/outline';
 import React, { useEffect, useState } from 'react';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
@@ -47,7 +47,7 @@ export default function BrowseSets() {
         <div className="border-b-2 border-b-neutral-200 font-semibold text-lg text-neutral-500 py-2">
           Study Sets
         </div>
-        <div class="grid grid-cols-3 gap-4 my-8 lg:grid-cols-4">
+        <div className="grid grid-cols-3 gap-4 my-8 lg:grid-cols-4">
           {sets?.map((set) => (
             <div className="relative w-full shadow h-36 bg-neutral-50 rounded-lg border-2 border-zinc-100 p-3">
               <h2 className="font-semibold text-lg text-stone-600">
@@ -66,6 +66,11 @@ export default function BrowseSets() {
                   ? timeConverter(set.timestamp?.seconds)
                   : 'N/A'}
               </div>
+              <button className="absolute bottom-0 right-0 m-1 rounded-full border border-indigo-500 p-1.5 text-indigo-500 hover:bg-indigo-500 hover:text-white focus:outline-none focus:ring active:bg-indigo-500">
+                <span className="sr-only">Preview</span>
+
+                <EyeIcon className="w-4 h-4" />
+              </button>
             </div>
           ))}
         </div>

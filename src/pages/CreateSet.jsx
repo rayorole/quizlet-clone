@@ -6,6 +6,7 @@ import { CheckIcon, PlusIcon, TemplateIcon } from '@heroicons/react/solid';
 import Newset from '../components/newset';
 
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 import { db } from '../firebase';
 
 let terms;
@@ -15,6 +16,8 @@ export function setTermsFn(arg) {
 }
 
 export default function CreateSet() {
+  const [imgUrl, setImgUrl] = useState(null);
+
   const auth = getAuth();
   const titleRef = useRef();
   const schoolRef = useRef();
@@ -27,10 +30,18 @@ export default function CreateSet() {
   });
 
   const handleImg = () => {
-    const file = this.refs.file.files[0];
-    const reader = new FileReader();
-    const url = reader.readAsDataURL(file);
-    console.log(url);
+    console.log('url');
+
+    if (image == null) return;
+
+    const storageRef = ref(storage, `files/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    uploadTask.on('state_changed', () => {
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+        setImgUrl(downloadURL);
+      });
+    });
   };
 
   const handleSubmit = async (e) => {
