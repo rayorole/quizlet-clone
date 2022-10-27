@@ -37,15 +37,15 @@ export default function Sets() {
         <div className="flex justify-between border-t border-t-neutral-200 py-2 text-sm font-medium text-gray-500">
           <p>&copy; {new Date().getFullYear()} Quizzie</p>
           <div className="cursor-pointer space-x-2">
-            <a href="#" className="hover:underline">
+            <a href="/" className="hover:underline">
               Support
             </a>
             <span>&#183;</span>
-            <a href="#" className="hover:underline">
+            <a href="/" className="hover:underline">
               Terms
             </a>
             <span>&#183;</span>
-            <a href="#" className="hover:underline">
+            <a href="/" className="hover:underline">
               Privacy policy
             </a>
           </div>
