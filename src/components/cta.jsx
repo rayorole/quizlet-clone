@@ -30,7 +30,7 @@ export default function Cta() {
 
           <p className="hidden text-gray-500 sm:mt-4 sm:block">
             You can contact us with the following form. You will be replied back
-            via mail.
+            via mail or call +32 491 89 78 04 for direct help.
           </p>
         </div>
 
