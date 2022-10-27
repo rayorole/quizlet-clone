@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { CheckIcon, PlusIcon, TemplateIcon } from '@heroicons/react/solid';
 import Newset from '../components/newset';
 
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase';
+
+let terms;
+
+export function setTermsFn(arg) {
+  terms = arg;
+  console.log('Terms:', terms);
+}
+
 export default function CreateSet() {
   const auth = getAuth();
+  const titleRef = useRef();
+  const schoolRef = useRef();
+  const aboutRef = useRef();
 
   onAuthStateChanged(auth, (user) => {
     if (!user) {
@@ -21,24 +34,40 @@ export default function CreateSet() {
     console.log(url);
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(terms);
+
+    const docRef = await addDoc(collection(db, 'terms'), {
+      title: titleRef.current.value || alert('Enter a title please'),
+      about: aboutRef.current.value,
+      school: schoolRef.current.value,
+      visibility: 'everyone',
+      editable: 'everyone',
+      terms: terms,
+    });
+
+    console.log('Document uploaded with id of:', docRef.id);
+  };
+
   return (
     <div>
       <Nav />
       <div className="max-w-screen-xl mx-auto my-12 px-8">
-        <div>
-          <div className="md:grid md:grid-cols-3 md:gap-6">
-            <div className="md:col-span-1">
-              <div className="px-4 sm:px-0">
-                <h3 className="text-lg font-medium leading-6 text-gray-900">
-                  Create a new set
-                </h3>
-                <p className="mt-1 text-sm text-gray-600">
-                  This information will be displayed publicly.
-                </p>
+        <form method="POST">
+          <div>
+            <div className="md:grid md:grid-cols-3 md:gap-6">
+              <div className="md:col-span-1">
+                <div className="px-4 sm:px-0">
+                  <h3 className="text-lg font-medium leading-6 text-gray-900">
+                    Create a new set
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    This information will be displayed publicly.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="mt-5 md:col-span-2 md:mt-0">
-              <form action="#" method="POST">
+              <div className="mt-5 md:col-span-2 md:mt-0">
                 <div className="shadow sm:overflow-hidden sm:rounded-md">
                   <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                     <div className="grid grid-cols-3 gap-6">
@@ -52,6 +81,7 @@ export default function CreateSet() {
                         <div className="mt-1 flex rounded-md shadow-sm">
                           <input
                             required
+                            ref={titleRef}
                             type="text"
                             name="title"
                             id="title"
@@ -72,6 +102,7 @@ export default function CreateSet() {
                       <div className="mt-1">
                         <textarea
                           required
+                          ref={aboutRef}
                           id="about"
                           name="about"
                           rows={3}
@@ -94,6 +125,7 @@ export default function CreateSet() {
                         <div className="mt-1 flex rounded-md shadow-sm">
                           <input
                             required
+                            ref={schoolRef}
                             type="text"
                             name="school"
                             id="school"
@@ -122,61 +154,59 @@ export default function CreateSet() {
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div className="hidden sm:block" aria-hidden="true">
-          <div className="py-5">
-            <div className="border-t border-gray-200" />
-          </div>
-        </div>
-
-        <div className="mt-10 sm:mt-0">
-          <div className="md:grid md:grid-cols-3 md:gap-6">
-            <div className="md:col-span-1">
-              <div className="px-4 sm:px-0">
-                <h3 className="text-lg font-medium leading-6 text-gray-900">
-                  Terms &amp; definitions
-                </h3>
-                <p className="mt-1 text-sm text-gray-600">
-                  Enter your terms and their definitions here.
-                </p>
               </div>
             </div>
-            <div className="mt-5 md:col-span-2 md:mt-0">
-              <div className="overflow-hidden shadow sm:rounded-md">
-                <div className="bg-white px-4 py-5 sm:p-6">
-                  <div>
-                    <Newset />
+          </div>
+
+          <div className="hidden sm:block" aria-hidden="true">
+            <div className="py-5">
+              <div className="border-t border-gray-200" />
+            </div>
+          </div>
+
+          <div className="mt-10 sm:mt-0">
+            <div className="md:grid md:grid-cols-3 md:gap-6">
+              <div className="md:col-span-1">
+                <div className="px-4 sm:px-0">
+                  <h3 className="text-lg font-medium leading-6 text-gray-900">
+                    Terms &amp; definitions
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Enter your terms and their definitions here.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-5 md:col-span-2 md:mt-0">
+                <div className="overflow-hidden shadow sm:rounded-md">
+                  <div className="bg-white px-4 py-5 sm:p-6">
+                    <div>
+                      <Newset />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="hidden sm:block" aria-hidden="true">
-          <div className="py-5">
-            <div className="border-t border-gray-200" />
-          </div>
-        </div>
-
-        <div className="mt-10 sm:mt-0">
-          <div className="md:grid md:grid-cols-3 md:gap-6">
-            <div className="md:col-span-1">
-              <div className="px-4 sm:px-0">
-                <h3 className="text-lg font-medium leading-6 text-gray-900">
-                  Visibility &amp; permissions
-                </h3>
-                <p className="mt-1 text-sm text-gray-600">
-                  Decide who can view and edit your set.
-                </p>
-              </div>
+          <div className="hidden sm:block" aria-hidden="true">
+            <div className="py-5">
+              <div className="border-t border-gray-200" />
             </div>
-            <div className="mt-5 md:col-span-2 md:mt-0">
-              <form action="#" method="POST">
+          </div>
+
+          <div className="mt-10 sm:mt-0">
+            <div className="md:grid md:grid-cols-3 md:gap-6">
+              <div className="md:col-span-1">
+                <div className="px-4 sm:px-0">
+                  <h3 className="text-lg font-medium leading-6 text-gray-900">
+                    Visibility &amp; permissions
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600">
+                    Decide who can view and edit your set.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-5 md:col-span-2 md:mt-0">
                 <div className="overflow-hidden shadow sm:rounded-md">
                   <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                     <fieldset>
@@ -219,6 +249,7 @@ export default function CreateSet() {
                         <div className="flex items-center">
                           <input
                             id="readable-everyone"
+                            defaultChecked
                             name="viewable"
                             type="radio"
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -269,6 +300,7 @@ export default function CreateSet() {
                         <div className="flex items-center">
                           <input
                             id="editable-everyone"
+                            defaultChecked
                             name="editable"
                             type="radio"
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -285,7 +317,7 @@ export default function CreateSet() {
                   </div>
                   <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                     <button
-                      type="submit"
+                      onClick={handleSubmit}
                       className="inline-flex space-x-3 justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
                       <span>Create set</span>
@@ -293,10 +325,10 @@ export default function CreateSet() {
                     </button>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import { MinusCircleIcon } from '@heroicons/react/outline';
-import { PhotographIcon } from '@heroicons/react/solid';
-import { CheckIcon, PlusIcon, TemplateIcon } from '@heroicons/react/solid';
+import { PlusIcon } from '@heroicons/react/solid';
+import { setTermsFn } from '../pages/CreateSet';
 import React, { useState } from 'react';
 
 export default function Newset(props) {
@@ -18,9 +18,6 @@ export default function Newset(props) {
   return (
     <div>
       <div className="max-h-screen overflow-y-auto px-2">
-        <button type="button" onClick={() => console.log(terms)}>
-          Click
-        </button>
         {Array.from(Array(counter)).map((c, index) => {
           return (
             <div
@@ -36,6 +33,7 @@ export default function Newset(props) {
                 </label>
                 <input
                   type="text"
+                  required
                   termid={index}
                   onChange={(e) => {
                     let newArr = [...terms]; // copying the old datas array
@@ -48,6 +46,7 @@ export default function Newset(props) {
                     };
 
                     setTerms(newArr);
+                    setTermsFn(newArr);
                   }}
                   name="term"
                   id="term"
@@ -64,6 +63,7 @@ export default function Newset(props) {
                 </label>
                 <input
                   type="text"
+                  required
                   name="definition"
                   defid={index}
                   onChange={(e) => {
@@ -77,18 +77,12 @@ export default function Newset(props) {
                     };
 
                     setTerms(newArr);
+                    setTermsFn(newArr);
                   }}
                   id="definition"
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
               </div>
-
-              {/* <div>
-              <input
-                type="file"
-                className="w-10 h-10 rounded bg-neutral-200 flex items-center justify-center"
-              />
-            </div> */}
             </div>
           );
         })}
