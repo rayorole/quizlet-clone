@@ -2,12 +2,12 @@ import React, { useState, useRef } from 'react';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { CheckIcon, PlusIcon, TemplateIcon } from '@heroicons/react/solid';
+import { CheckIcon, TemplateIcon } from '@heroicons/react/solid';
 import Newset from '../components/newset';
 
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
-import { db } from '../firebase';
+import { db, storage } from '../firebase';
 
 let terms;
 
@@ -16,7 +16,7 @@ export function setTermsFn(arg) {
 }
 
 export default function CreateSet() {
-  const [imgUrl, setImgUrl] = useState(null);
+  const [fileUrl, setFileUrl] = useState(null);
 
   const auth = getAuth();
   const titleRef = useRef();
@@ -29,17 +29,15 @@ export default function CreateSet() {
     }
   });
 
-  const handleImg = () => {
-    console.log('url');
+  const fileUpload = async (file) => {
+    if (!file) return;
 
-    if (image == null) return;
-
-    const storageRef = ref(storage, `files/${file.name}`);
+    const storageRef = ref(storage, `covers/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on('state_changed', () => {
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-        setImgUrl(downloadURL);
+        setFileUrl(downloadURL);
       });
     });
   };
@@ -56,6 +54,8 @@ export default function CreateSet() {
       terms: terms,
       user: auth.currentUser.displayName || 'Anonymous',
       timestamp: serverTimestamp(),
+      cover: fileUrl,
+      uid: auth.currentUser.uid,
     });
 
     console.log('Document uploaded with id of:', docRef.id);
@@ -151,12 +151,17 @@ export default function CreateSet() {
                         Photo
                       </label>
                       <div className="mt-1 flex items-center">
-                        <div className="flex h-20 w-20 overflow-hidden items-center justify-center rounded-full bg-gray-100">
-                          <TemplateIcon className="h-14 w-14 text-gray-300" />
-                        </div>
+                        {fileUrl ? (
+                          <img src={fileUrl} alt="Img" className="w-14" />
+                        ) : (
+                          <div className="flex h-20 w-20 overflow-hidden items-center justify-center rounded-full bg-gray-100">
+                            <TemplateIcon className="h-14 w-14 text-gray-300" />
+                          </div>
+                        )}
+
                         <input
                           required
-                          onChange={handleImg}
+                          onChange={(e) => fileUpload(e.target.files[0])}
                           type="file"
                           accept="image/*"
                           className="ml-5 file:hidden w-40 cursor-pointer rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
