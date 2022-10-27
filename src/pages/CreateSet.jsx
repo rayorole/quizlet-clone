@@ -5,7 +5,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { CheckIcon, PlusIcon, TemplateIcon } from '@heroicons/react/solid';
 import Newset from '../components/newset';
 
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 
 let terms;
@@ -43,6 +43,8 @@ export default function CreateSet() {
       visibility: 'everyone',
       editable: 'everyone',
       terms: terms,
+      user: auth.currentUser.displayName || 'Anonymous',
+      timestamp: serverTimestamp(),
     });
 
     console.log('Document uploaded with id of:', docRef.id);
