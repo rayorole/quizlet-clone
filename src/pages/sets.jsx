@@ -6,7 +6,9 @@ import {
   FolderAddIcon,
   PlusIcon,
   DocumentIcon,
+  PencilIcon,
   EyeIcon,
+  ArrowSmRightIcon,
 } from '@heroicons/react/outline';
 import { getDocs, collection, where, query } from 'firebase/firestore';
 import { db } from '../firebase';
@@ -72,71 +74,87 @@ export default function Sets() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-8 lg:grid-cols-4">
-            {sets?.map((set, id) => (
+          <div>
+            <div className="py-3 flex justify-end">
               <a
-                key={id}
-                href="/"
-                className="block rounded-lg p-4 shadow-sm shadow-indigo-100 border border-neutral-200"
+                href="/sets/create"
+                className="relative mt-4 inline-flex items-center px-6 py-2 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
               >
-                <img
-                  alt="Home"
-                  src={set.cover}
-                  className="h-56 w-full rounded-md object-contain"
-                />
+                <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
+                  <ArrowSmRightIcon className="w-5 h-5" />
+                </span>
 
-                <div className="mt-2">
-                  <dl>
-                    <div>
-                      <dt className="sr-only">Date</dt>
+                <span className="text-sm font-medium transition-all group-hover:mr-4">
+                  Create new set
+                </span>
+              </a>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-8 lg:grid-cols-4">
+              {sets?.map((set, id) => (
+                <a
+                  key={id}
+                  href="/"
+                  className="block rounded-lg p-4 shadow-sm shadow-indigo-100 border border-neutral-200"
+                >
+                  <img
+                    alt="Home"
+                    src={set.cover}
+                    className="h-56 w-full rounded-md object-contain"
+                  />
 
-                      <dd className="text-sm text-gray-500">
-                        {set.timestamp?.seconds
-                          ? timeConverter(set.timestamp?.seconds)
-                          : 'N/A'}
-                      </dd>
-                    </div>
+                  <div className="mt-2">
+                    <dl>
+                      <div>
+                        <dt className="sr-only">Date</dt>
 
-                    <div>
-                      <dt className="sr-only">Title</dt>
+                        <dd className="text-sm text-gray-500">
+                          {set.timestamp?.seconds
+                            ? timeConverter(set.timestamp?.seconds)
+                            : 'N/A'}
+                        </dd>
+                      </div>
 
-                      <dd className="font-medium">{set.title}</dd>
-                    </div>
-                  </dl>
+                      <div>
+                        <dt className="sr-only">Title</dt>
 
-                  <div className="mt-6 flex items-center gap-8 text-xs justify-between">
-                    <div className="gap-8 space-x-5">
-                      <div className="sm:inline-flex sm:shrink-0 sm:items-center">
-                        <DocumentIcon className="h-4 w-4 text-indigo-700" />
+                        <dd className="font-medium">{set.title}</dd>
+                      </div>
+                    </dl>
 
-                        <div className="mt-1.5 sm:ml-3 sm:mt-0">
-                          <p className="text-gray-500">Terms</p>
+                    <div className="mt-6 flex items-center gap-8 text-xs justify-between">
+                      <div className="gap-8 space-x-5">
+                        <div className="sm:inline-flex sm:shrink-0 sm:items-center">
+                          <DocumentIcon className="h-4 w-4 text-indigo-700" />
 
-                          <p className="font-medium">{set.terms.length}</p>
+                          <div className="mt-1.5 sm:ml-3 sm:mt-0">
+                            <p className="text-gray-500">Terms</p>
+
+                            <p className="font-medium">{set.terms.length}</p>
+                          </div>
+                        </div>
+
+                        <div className="sm:inline-flex sm:shrink-0 sm:items-center">
+                          <EyeIcon className="h-4 w-4 text-indigo-700" />
+
+                          <div className="mt-1.5 sm:ml-3 sm:mt-0">
+                            <p className="text-gray-500">Visibility</p>
+
+                            <p className="font-medium">{set.visibility}</p>
+                          </div>
                         </div>
                       </div>
 
                       <div className="sm:inline-flex sm:shrink-0 sm:items-center">
-                        <EyeIcon className="h-4 w-4 text-indigo-700" />
-
-                        <div className="mt-1.5 sm:ml-3 sm:mt-0">
-                          <p className="text-gray-500">Visibility</p>
-
-                          <p className="font-medium">{set.visibility}</p>
-                        </div>
+                        <button className="m-1 rounded-full border border-indigo-500 p-1.5 text-indigo-500 hover:bg-indigo-500 hover:text-white focus:outline-none focus:ring active:bg-indigo-500">
+                          <span className="sr-only">Preview</span>
+                          <PencilIcon className="w-4 h-4" />
+                        </button>
                       </div>
-                    </div>
-
-                    <div className="sm:inline-flex sm:shrink-0 sm:items-center">
-                      <button className="m-1 rounded-full border border-indigo-500 p-1.5 text-indigo-500 hover:bg-indigo-500 hover:text-white focus:outline-none focus:ring active:bg-indigo-500">
-                        <span className="sr-only">Preview</span>
-                        <EyeIcon className="w-4 h-4" />
-                      </button>
                     </div>
                   </div>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))}
+            </div>
           </div>
         )}
 
