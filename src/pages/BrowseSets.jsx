@@ -46,8 +46,8 @@ export default function BrowseSets() {
         <div className="border-b-2 border-b-neutral-200 font-semibold text-lg text-neutral-500 py-2">
           Study Sets
         </div>
-        <div className="grid grid-cols-3 gap-4 my-8 lg:grid-cols-4">
-          {sets?.map((set) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-8 lg:grid-cols-4">
+          {sets?.map((set, id) => (
             // <div className="flex justify-between relative w-full shadow h-36 bg-neutral-50 rounded-lg border-2 border-zinc-100 p-3">
             //   <div>
             //     <h2 className="font-semibold text-lg text-stone-600">
@@ -83,6 +83,7 @@ export default function BrowseSets() {
             //   </button>
             // </div>
             <a
+              key={id}
               href="/"
               className="block rounded-lg p-4 shadow-sm shadow-indigo-100 border border-neutral-200"
             >
