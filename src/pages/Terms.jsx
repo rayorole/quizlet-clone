@@ -6,7 +6,14 @@ export default function Terms() {
   return (
     <div>
       <Nav />
-      pls no copy if copy i mad
+      <div>
+        <div>pls no copy, if copy i mad</div>
+        <img src="cars.png" width={400}></img>
+        kachow
+        <img src="raid-shadow-legends.jpg"></img>
+        bart Vervaele true baddie
+      </div>
+      <Footer />
     </div>
   );
 }
