@@ -6,7 +6,7 @@ export default function Terms() {
   return (
     <div>
       <Nav />
-      pls no copy
+      pls no copy if copy i mad
     </div>
   );
 }
