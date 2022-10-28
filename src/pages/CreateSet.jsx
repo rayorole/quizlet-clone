@@ -32,16 +32,16 @@ export default function CreateSet() {
   const handleImg = () => {
     console.log('url');
 
-    if (image == null) return;
+    // if (image == null) return;
 
-    const storageRef = ref(storage, `files/${file.name}`);
-    const uploadTask = uploadBytesResumable(storageRef, file);
+    // const storageRef = ref(storage, `files/${file.name}`);
+    // const uploadTask = uploadBytesResumable(storageRef, file);
 
-    uploadTask.on('state_changed', () => {
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-        setImgUrl(downloadURL);
-      });
-    });
+    // uploadTask.on('state_changed', () => {
+    //   getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+    //     setImgUrl(downloadURL);
+    //   });
+    // });
   };
 
   const handleSubmit = async (e) => {
