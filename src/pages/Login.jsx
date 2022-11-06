@@ -74,10 +74,10 @@ export default function Login() {
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{' '}
               <a
-                className="inline-block px-4 py-2 ml-2 text-sm font-medium text-white bg-blue-600 border border-blue-600 transition rounded-md shrink-0 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                class="relative font-medium text-indigo-600 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-indigo-600 before:transition hover:before:scale-100"
                 href="/signup"
               >
-                Create new account
+                create new account
               </a>
             </p>
           </div>

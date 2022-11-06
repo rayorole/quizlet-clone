@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 export default function Hero() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+    if (user) setLoggedIn(true);
+  });
   return (
     <section>
       <div className="px-4 py-16 lg:pb-0 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
@@ -22,7 +28,7 @@ export default function Hero() {
 
             <a
               className="relative mt-4 inline-flex items-center px-8 py-3 overflow-hidden text-white bg-indigo-600 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
-              href="/Login"
+              href={loggedIn ? '/sets/browse' : '/login'}
             >
               <span className="absolute right-0 transition-transform translate-x-full group-hover:-translate-x-4">
                 <svg
@@ -42,7 +48,7 @@ export default function Hero() {
               </span>
 
               <span className="text-sm font-medium transition-all group-hover:mr-4">
-                Get started
+                {loggedIn ? 'Browse sets' : 'Get started'}
               </span>
             </a>
           </div>
