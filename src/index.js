@@ -11,6 +11,7 @@ import Sets from './pages/Sets';
 import CreateSet from './pages/CreateSet';
 import BrowseSets from './pages/BrowseSets';
 import Terms from './pages/Terms';
+import Bo from './pages/Bo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +26,7 @@ root.render(
         <Route path="/sets/create" element={<CreateSet />} />
         <Route path="/sets/browse" element={<BrowseSets />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/u-found-lil-Boo" element={<Bo />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

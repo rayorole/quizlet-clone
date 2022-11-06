@@ -36,7 +36,7 @@ export default function BrowseSets() {
               className="bg-white font-medium group-active:border-indigo-600 h-10 px-5 pr-16 rounded-lg text-sm focus:border-none focus:ring-0 appearance-none border-none outline-none ring-0 focus:outline-none"
               type="search"
               name="search"
-              placeholder="Search"
+              placeholder="Search sets or schools"
             />
             <button className="px-4 py-3 hover:bg-neutral-100 transition duration-150 rounded-r-md">
               <SearchIcon className="w-4 h-4 text-neutral-500" />
