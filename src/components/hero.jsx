@@ -7,6 +7,7 @@ export default function Hero() {
   onAuthStateChanged(auth, (user) => {
     if (user) setLoggedIn(true);
   });
+
   return (
     <section>
       <div className="px-4 py-16 lg:pb-0 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
