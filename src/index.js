@@ -11,6 +11,7 @@ import Sets from './pages/Sets';
 import CreateSet from './pages/CreateSet';
 import BrowseSets from './pages/BrowseSets';
 import Terms from './pages/Terms';
+import Set from './pages/Set';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
         <Route path="/login" element={<Login />} />
         <Route path="/credits" element={<Credits />} />
         <Route path="/sets" element={<Sets />} />
+        <Route path="/sets/:id" element={<Set />} />
         <Route path="/sets/create" element={<CreateSet />} />
         <Route path="/sets/browse" element={<BrowseSets />} />
         <Route path="/terms" element={<Terms />} />
